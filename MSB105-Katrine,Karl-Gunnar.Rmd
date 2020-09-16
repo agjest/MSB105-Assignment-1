@@ -25,11 +25,13 @@ lang: nb-NO
 ---
 
 
-## Innledning
+## 1. Innledning
 
 Første test inkludert en referanse: @xie2015
 
-## Teori
+## 2. Teori
+
+### 2.1 Replikerbarhet/reproduserbarhet
 
 Det er ønskelig at vitenskapelige oppdagelser og fremskritt skal være robuste og pålitelige fordi vi ønsker å ha tillit til at resultatene er riktig og at undersøkelsene er gjort på en tilfredsstillende måte [@mcnutt2014]. 
 Et viktig verktøy for forskere for å kunne bekrefte eller avkrefte sine funn er at undersøkelsen reproduseres, som vil si gjøres på nytt, med de samme dataene og med den samme metodikken, men gjort av en uavhengig part. 
@@ -41,16 +43,17 @@ Dersom den nye studien kan bekrefte resultatene og konklusjonen fra et tidligere
 Dette har visst seg å være å være veldig vanskelig. 
 
 
-Replikerbarhet/reproduserbarhet
+### 2.2 Problemets omfang
 
-Problemets omfang
 - Vil dagens løsning med arkiv av data og event. programkode hos tidsskriftene
 kunne løse problemet?
 
-Mulig løsning (teoretisk plan):
+#### 2.2.1 Mulig løsning (teoretisk plan)
+
 - «Compendium», «Dynamic document», «code chunck» og «text chunk»
 
-Mulig løsning:
+#### 2.2.2 Mulig løsning:
+
 - R Notebooks
 
 ## Analyse
