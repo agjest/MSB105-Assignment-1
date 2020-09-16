@@ -27,7 +27,12 @@ lang: nb-NO
 
 ## Innledning
 
-Første test inkludert en referanse: @xie2015
+Reproduserbarhet, R notebooks
+
+I denne oppgaven ønsker vi å se på reproduserbarhet og viktigheten av det.
+Vi vil i denne sammenhengen ta oss innom temaet om bruk av "R Notebook" i Rstudio.
+
+Vi vil se på teori rundt reproduserbarhet og R Notebook, som vi også vil knytte opp til en analyse. 
 
 ## Teori
 
