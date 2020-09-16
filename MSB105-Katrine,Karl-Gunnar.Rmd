@@ -29,6 +29,10 @@ lang: nb-NO
 
 Reproduserbarhet, R notebooks
 
+
+
+Vi vil se på teori rundt reproduserbarhet og R Notebook, som vi også vil knytte opp til en analyse. 
+
 ## Teori
 
 ## Analyse
