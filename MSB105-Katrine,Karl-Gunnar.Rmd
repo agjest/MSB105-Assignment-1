@@ -1,0 +1,32 @@
+---
+title: "R Notebooks og reproduserbarhet"
+subtitle: "Assignment 1 i MSB105 Data Science - innleveringsfrist 21.09.20"
+author: 
+  - Katrine Hope
+  - Karl-Gunnar Severinsen
+classoption: twoside
+fontsize: 12pt
+output:
+  word_document:
+    df_print: paged
+    toc: true
+    toc_depth: 3
+  pdf_document:
+    df_print: paged
+    toc: true
+    toc_depth: 3
+  html_document:
+    df_print: paged
+    toc: true
+    toc_depth: 3
+linestretch: 1.5
+bibliography: reproducibility.bib
+lang: nb-NO
+---
+
+
+## Innledning
+
+Første test inkludert en referanse: @xie2015
+
+## Referanse
