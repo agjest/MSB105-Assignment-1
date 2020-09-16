@@ -31,6 +31,18 @@ Første test inkludert en referanse: @xie2015
 
 ## Teori
 
+Replikerbarhet/reproduserbarhet
+
+Problemets omfang
+- Vil dagens løsning med arkiv av data og event. programkode hos tidsskriftene
+kunne løse problemet?
+
+Mulig løsning (teoretisk plan):
+- «Compendium», «Dynamic document», «code chunck» og «text chunk»
+
+Mulig løsning:
+- R Notebooks
+
 ## Analyse
 
 ## Konklusjon
