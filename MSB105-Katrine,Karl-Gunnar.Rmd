@@ -36,3 +36,7 @@ Første test inkludert en referanse: @xie2015
 ## Konklusjon
 
 ## Referanse
+
+## Appendiks
+
+![Merge conflict](C:/Users/dunna/Documents/Skole 2020/MSB105 - Data Science/MSB105-Assignment-1/merge-conflict.png)
