@@ -6,6 +6,7 @@ author:
   - Karl-Gunnar Severinsen
 classoption: twoside
 fontsize: 12pt
+linestretch: 1.5
 output:
   html_document:
     df_print: paged
@@ -19,9 +20,9 @@ output:
     df_print: paged
     toc: true
     toc_depth: 3
-linestretch: 1.5
 bibliography: reproducibility.bib
 lang: nb-NO
+csl: apa-no-ampersand.csl
 ---
 
 
@@ -40,8 +41,11 @@ Vi vil se på teori rundt reproduserbarhet og R Notebook, som vi også vil knytt
 
 ## Konklusjon
 
+\newpage
 ## Referanse
+<div id="refs"></div>
 
+\newpage
 ## Appendiks
 
 ![Merge conflict](C:/Users/dunna/Documents/Skole 2020/MSB105 - Data Science/MSB105-Assignment-1/merge-conflict.png)
