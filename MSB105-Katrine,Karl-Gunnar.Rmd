@@ -33,14 +33,22 @@ Første test inkludert en referanse: @xie2015
 
 ### 2.1 Replikerbarhet/reproduserbarhet
 
-Det er ønskelig at vitenskapelige oppdagelser og fremskritt skal være robuste og pålitelige fordi vi ønsker å ha tillit til at resultatene er riktig og at undersøkelsene er gjort på en tilfredsstillende måte [@mcnutt2014]. 
-Et viktig verktøy for forskere for å kunne bekrefte eller avkrefte sine funn er at undersøkelsen reproduseres, som vil si gjøres på nytt, med de samme dataene og med den samme metodikken, men gjort av en uavhengig part. 
+Det er ønskelig at vitenskapelige oppdagelser og fremskritt skal være robuste og pålitelige fordi vi ønsker å ha tillit til at resultatene er riktig og at undersøkelsene er gjort på en tilfredsstillende måte [@bollen2015].
+I følge @mcnutt2014 er det viktig for at vitenskapen skal utvikle seg at funnene baserer seg på troverdige funn.
+Mange forskere mener at reproduserbarhet er en viktig fremgangsmåte for å kunne validere funnene sine, men dette har vist seg å være veldig vanskelig å gjennomføre [@mcnutt2014]. 
+National Science Foundation i USA viser til at for at vitenskap skal være robust og pålitelig må funnene være reproduserbar, replikerbart og generaliserbart [@bollen2015]. 
+I henhold til National Science Foundation blir de 3 påstandene definert som [@bollen2015]:
+
+- Reproduserbarhet: Å repodusere vil si å gjøre studiet på nytt, med de samme dataene og med den samme metodikken, men gjort av en uavhengig part.
+
+- Replikerbarhet: Å replikere vil si at et studie gjøres på nytt av en uavhengig part, gjerne med nye data og at resultater og konklusjon er lik som tidligere. 
+
+- Generaliserbarhet: Vil si at et studie kan gjøres på nytt med ny data og ny sammensetning, men komme frem til lignende konklusjoner. 
+
 Reproduksjon har potensiale til å være en minimumsstandard i følge @peng2011, når full uavhengig replikasjon ikke er tilgjengelig. 
-Et annet verktøy for forskere er å replikere en studie, det vil si at en undersøkelse gjøres på nytt av en uavhengig part, gjerne med nye data og at resultater og konklusjon er lik som tidligere. 
 Dersom den nye studien kan bekrefte resultatene og konklusjonen fra et tidligere studie via replikasjon blir dette sett på som en vitenskapelig gullstandard [@jasny2011]. 
 @peng2011 anser replikasjon som den ultimate standarden i likhet med @jasny2011. 
 
-Dette har visst seg å være å være veldig vanskelig. 
 
 
 ### 2.2 Problemets omfang
