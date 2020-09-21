@@ -71,6 +71,14 @@ Hovedpunktet er at all data og koder vil bli sendt sammen med et fullstendig rep
 
 - «Compendium», «Dynamic document», «code chunck» og «text chunk»
 
+I følge @gentleman2007 er det viktig, kanskje også essensielt, å integrere beregninger og koder som brukes i dataanalyser, metodebeskrivelser og simuleringer. 
+Dette kan gjøres via et kompendium i henhold til @gentleman2007.
+Kompendium vil si en samling av de ulike elementene, som tekst, kode, data, metodikk og lignende, og dette skal settes sammen som en enhet for å kunne distribueres, håndteres og oppdateres. 
+Dersom kompendiet er laget riktig skal forfattere enkelt kunne reprodusere resultatene. 
+
+Dynamiske dokumenter: Er en ordnet sammensetning av stykker (chuncks) med kode eller tekst. 
+
+
 #### 2.2.2 Mulig løsning:
 
 - R Notebooks
