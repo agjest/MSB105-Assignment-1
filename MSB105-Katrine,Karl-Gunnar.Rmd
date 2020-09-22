@@ -57,6 +57,12 @@ Dersom den nye studien kan bekrefte resultatene og konklusjonen fra et tidligere
 - Vil dagens løsning med arkiv av data og event. programkode hos tidsskriftene
 kunne løse problemet?
 
+Som forklart tidligere så kan tidligere studier mangle data, koder, fremgangsmåte, feil i programvare osv, samt er det flere forskere som ikke ønsker å gi fra seg all informasjon om sine studier. 
+Dette gjør at det er nærmest umulig for forskere i senere tid å reprodusere en tidligere studie.
+Siden det er mer enn et problem vil det også være flere løsninger som må implementeres for at full reproduksjon skal være mulig. 
+Vi kan dele løsningene inn i tekniske løsninger og menneskelige løsninger. 
+Den menneskelige komponenten i problemstillingen er at mange forskere ikke ønsker full åpenhet til data, koder, programvare osv i sine studier. Dette har ikke vært standard retningslinjer tidligere og det viser seg at dette kan fremdeles i dag være en utfordring, det trengs derfor klare retningslinjer om hva som bør anses som god forskning i henhold til kravene om reproduksjon og replikasjon.
+I den tekniske delen kan problemet ofte være at det mangler data, koder, fremgangsmåte eller at det er feil i programvare. 
 Ved å integrere koder i selve artikkelen, selv om de ikke trenger nødvendigvis å være synlig, skal det være mulig for andre forskere å reprodusere og replikere studien. Her er en oversikt over hva som skal sendes til tidsskriftene:
 
 - Dokument med tekst.
@@ -79,16 +85,24 @@ Dersom kompendiet er laget riktig skal forfattere enkelt kunne reprodusere resul
 Dynamiske dokumenter er en ordnet sammensetning av stykker (chunks) med kode eller tekst. 
 Code chunk kan brukes som et middel som gjengir utdata i dokumenter, eller bare for å vise kode for illustrasjon, siden code chunks utfører beregninger som trengs for å produsere riktig utdata i dokumentet, men også for å produsere mellomresultater brukt på tvers av forskjellige code chunks [@gentleman2007]. 
 Text chunks er ment å være formatert for lesing og beskriver som oftest problemet, koden, resultatene og tolkningen [@gentleman2007]. 
-Et optimalt kompendium vil derfor være et dynamisk dokument siden alle komponenter er til stedet for reproduksjon. 
+Et optimalt kompendium vil derfor være et dynamisk dokument siden alle komponenter er til stedet for reproduksjon. I analysedelen av denne oppgaven vil vi vise i R Notebook i programmet Rstudio hvordan vi legger inn text- og code chunks. 
 
 #### 2.2.2 Mulig løsning:
 
 - R Notebooks
 
-Tidligere var det R markdown som ble brukt, men der fikk man ikke all tekst og koding inn i samme dokument, som oftest ble dette delt opp i ulike vindu. 
-R Notebook er den nyeste utgivelsen fra R Studio på programutvikling. Rstudio er en IDE (Integrated Developer Enviroment) for alle R relaterte ting. R Studio er et gratis programvare som du både kan laste ned lokalt på datamaskinen eller du kan jobbe over internett. Alle de vanlige platformene skal ha mulighet til å bruke R Studio som Mac, Window og Linux. R studio må knyttes sammen med andre programvarer for å få maks utbytte av 
+Tidligere var det R markdown som ble brukt, men der fikk man ikke all tekst, koding og utdata (resultat) inn i samme dokument, som oftest ble dette delt opp i ulike vindu. 
+R Notebook er den nyeste utgivelsen fra Rstudio på programutvikling. Rstudio er en IDE (Integrated Developer Enviroment) for alle R relaterte ting. Rstudio er et gratis programvare som du både kan laste ned lokalt på datamaskinen eller du kan jobbe over internett. Alle de vanlige platformene skal ha mulighet til å bruke R Studio som Mac, Window og Linux. R studio må knyttes sammen med andre programvarer for å kunne oppnå reproduserbarhet og replikerbarhet som er målet. Programvarer som R knyttes opp mot: 
 
-Rstudio kan knyttes opp mot git og det gjør at man har arbeidet sitt skylagret. 
+- R Markdown
+- Knitr
+- Github
+- LaTex (tinytex)
+- (Tinyverse, må sjekkes?)
+
+Rstudio kan knyttes opp mot github og det gjør at man har arbeidet sitt skylagret. 
+
+En R Notebook er et R Markdown dokument med "code- og text chunks" som kan hente inn data og koder, utføre beregning ut i fra formlene som legges inn i "code chunks" og R Notebook vil vise oss resultatene direkte i samme dokument som vi arbeider i [xie2018]. 
 
 ## Analyse
 
