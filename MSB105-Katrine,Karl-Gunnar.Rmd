@@ -27,11 +27,12 @@ lang: nb-NO
 
 ## Innledning
 
-Første test inkludert en referanse: @xie2015
-
 ## Teori
 
 ## Analyse
+
+I dette kapittelet vil vi gå gjennom noen eksempler hvordan vi kan lage og vise frem data ved hjelp av *RStudio*.
+Vi vil også se på hva som kan gjøres for å vurdere viktigheten av å kunne presentere reproduserbare data, og om dette vil la seg gjøre på en enkel måte.
 
 ## Konklusjon
 
