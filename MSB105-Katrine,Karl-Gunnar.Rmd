@@ -76,12 +76,19 @@ Dette kan gjøres via et kompendium i henhold til @gentleman2007.
 Kompendium vil si en samling av de ulike elementene, som tekst, kode, data, metodikk og lignende, og dette skal settes sammen som en enhet for å kunne distribueres, håndteres og oppdateres. 
 Dersom kompendiet er laget riktig skal forfattere enkelt kunne reprodusere resultatene. 
 
-Dynamiske dokumenter: Er en ordnet sammensetning av stykker (chuncks) med kode eller tekst. 
-
+Dynamiske dokumenter er en ordnet sammensetning av stykker (chunks) med kode eller tekst. 
+Code chunk kan brukes som et middel som gjengir utdata i dokumenter, eller bare for å vise kode for illustrasjon, siden code chunks utfører beregninger som trengs for å produsere riktig utdata i dokumentet, men også for å produsere mellomresultater brukt på tvers av forskjellige code chunks [@gentleman2007]. 
+Text chunks er ment å være formatert for lesing og beskriver som oftest problemet, koden, resultatene og tolkningen [@gentleman2007]. 
+Et optimalt kompendium vil derfor være et dynamisk dokument siden alle komponenter er til stedet for reproduksjon. 
 
 #### 2.2.2 Mulig løsning:
 
 - R Notebooks
+
+Tidligere var det R markdown som ble brukt, men der fikk man ikke all tekst og koding inn i samme dokument, som oftest ble dette delt opp i ulike vindu. 
+R Notebook er den nyeste utgivelsen fra R Studio på programutvikling. Rstudio er en IDE (Integrated Developer Enviroment) for alle R relaterte ting. R Studio er et gratis programvare som du både kan laste ned lokalt på datamaskinen eller du kan jobbe over internett. Alle de vanlige platformene skal ha mulighet til å bruke R Studio som Mac, Window og Linux. R studio må knyttes sammen med andre programvarer for å få maks utbytte av 
+
+Rstudio kan knyttes opp mot git og det gjør at man har arbeidet sitt skylagret. 
 
 ## Analyse
 
