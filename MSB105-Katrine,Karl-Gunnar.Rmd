@@ -8,15 +8,15 @@ classoption: twoside
 fontsize: 12pt
 linestretch: 1.5
 output:
-  pdf_document:
-    df_print: paged
-    toc: true
-    toc_depth: 3
   html_document:
     df_print: paged
     toc: true
     toc_depth: 3
     toc_float: true
+  pdf_document:
+    df_print: paged
+    toc: true
+    toc_depth: 3
   word_document:
     df_print: paged
     toc: true
@@ -103,18 +103,8 @@ I analysedelen av denne oppgaven vil vi vise i R Notebook i programmet Rstudio h
 #### 2.2.2 Mulig løsning (R Notebooks):
 
 Tidligere var det R Markdown som ble brukt, men der fikk man ikke all tekst, koding og utdata (resultat) inn i samme dokument, som oftest ble dette delt opp i ulike vindu. 
-R Notebook er den nyeste utgivelsen fra Rstudio på programutvikling. Rstudio er en IDE (Integrated Developer Enviroment) for alle R relaterte ting. Rstudio er et gratis programvare som du både kan laste ned lokalt på datamaskinen eller du kan jobbe over internett. Alle de vanlige platformene skal ha mulighet til å bruke R Studio som Mac, Window og Linux. R studio må knyttes sammen med andre programvarer for å kunne oppnå reproduserbarhet og replikerbarhet som er målet. 
-
-Programvarer som R knyttes opp mot: 
-
-- R Markdown
-- Knitr
-- Github
-- LaTex (tinytex)
-- (Tinyverse, må sjekkes?)
-
+R Notebook er den nyeste utgivelsen fra Rstudio på programutvikling. Rstudio er en IDE (Integrated Developer Enviroment) for alle R relaterte ting. Rstudio er et gratis programvare som du både kan laste ned lokalt på datamaskinen eller du kan jobbe over internett. Alle de vanlige platformene skal ha mulighet til å bruke R Studio som Mac, Window og Linux. R studio må knyttes sammen med andre programvarer og pakker for å kunne oppnå reproduserbarhet og replikerbarhet som er målet, se punkt 3.3 for mer info. 
 RStudio kan knyttes opp mot github og det gjør at man har arbeidet sitt skylagret. 
-
 En R Notebook er et R Markdown dokument med "code- og text chunks" som kan hente inn data og koder, utføre beregning ut i fra formlene som legges inn i "code chunks" og R Notebook vil vise oss resultatene direkte i samme dokument som vi arbeider i [xie2018]. 
 
 ## 3. Analyse
