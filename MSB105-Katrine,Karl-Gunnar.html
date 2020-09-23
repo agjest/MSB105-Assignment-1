@@ -2800,11 +2800,20 @@ div.tocify {
 <div id="replikerbarhetreproduserbarhet" class="section level3">
 <h3>2.1 Replikerbarhet/reproduserbarhet</h3>
 <p>Det er ønskelig at vitenskapelige oppdagelser og fremskritt skal være robuste og pålitelige fordi vi ønsker å ha tillit til at resultatene er riktig og at undersøkelsene er gjort på en tilfredsstillende måte <span class="citation">(Bollen et al., 2015)</span>. I følge <span class="citation">McNutt (2014)</span> er det viktig for at vitenskapen skal utvikle seg at funnene baserer seg på troverdige funn. Mange forskere mener at reproduserbarhet er en viktig fremgangsmåte for å kunne validere funnene sine, men dette har vist seg å være veldig vanskelig å gjennomføre <span class="citation">(McNutt, 2014)</span>. Noe av det som kan være med å gjøre det vanskelig å reprodusere, men også replikere, er at tidligere studier kan mangle data eller koder, det kan være feil i programvaren som er sendt med, det kan mangle dokumentasjon, samt er det noen forskere som ikke ønsker å gi fra seg sine data og koder på studiene sine. National Science Foundation i USA viser til at for at vitenskap skal være robust og pålitelig må funnene være reproduserbar, replikerbart og generaliserbart <span class="citation">(Bollen et al., 2015)</span>. I henhold til National Science Foundation blir de 3 påstandene definert som <span class="citation">(Bollen et al., 2015)</span>:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Reproduserbarhet</strong>:
 <ul>
-<li><p><strong>Reproduserbarhet</strong>: Å repodusere vil si å gjøre studiet på nytt, med de samme dataene og med den samme metodikken, men gjort av en uavhengig part.</p></li>
-<li><p><strong>Replikerbarhet</strong>: Å replikere vil si at et studie gjøres på nytt av en uavhengig part, gjerne med nye data og at resultater og konklusjon er lik som tidligere.</p></li>
-<li><p><strong>Generaliserbarhet</strong>: Vil si at et studie kan gjøres på nytt med ny data og ny sammensetning, men komme frem til lignende konklusjoner.</p></li>
-</ul>
+<li>Å repodusere vil si å gjøre studiet på nytt, med de samme dataene og med den samme metodikken, men gjort av en uavhengig part.</li>
+</ul></li>
+<li><strong>Replikerbarhet</strong>:
+<ul>
+<li>Å replikere vil si at et studie gjøres på nytt av en uavhengig part, gjerne med nye data og at resultater og konklusjon er lik som tidligere.</li>
+</ul></li>
+<li><strong>Generaliserbarhet</strong>:
+<ul>
+<li>Vil si at et studie kan gjøres på nytt med ny data og ny sammensetning, men komme frem til lignende konklusjoner.</li>
+</ul></li>
+</ol>
 <p>Reproduksjon har potensiale til å være en minimumsstandard i følge <span class="citation">Peng (2011)</span>, når full uavhengig replikasjon ikke er tilgjengelig. Dersom den nye studien kan bekrefte resultatene og konklusjonen fra et tidligere studie via replikasjon blir dette sett på som en vitenskapelig gullstandard <span class="citation">(Jasny et al., 2011)</span>. <span class="citation">Peng (2011)</span> anser replikasjon som den ultimate standarden i likhet med <span class="citation">Jasny et al. (2011)</span>.</p>
 </div>
 <div id="problemets-omfang" class="section level3">
@@ -2932,7 +2941,7 @@ apply(Titanic, c(3, 4), sum)</code></pre>
 <p><em>Det passer nok best å kjøre en slik kode helt til slutt i dokumentet, da det gjerne tar en del plass og kan virke forstyrrende inne i en artikkel (som her).</em></p>
 </blockquote>
 <p>Som vi var inne på i forrige kapittel, kan en god løsning være å samle alle kodene i et eget <em>kode-appendiks</em> i slutten av dokumentet. Dette er noe vi har valgt å gjøre for å vise frem muligheten. Vi benytter oss av følgende kode i en egen “chunk” i appendikset <em>“Koder”</em>:</p>
-<p><strong><em>{r ref.label=knitr::all_labels(), echo = T, eval = F}</em></strong>, som vi har hentet fra <span class="citation">Xie (2018)</span>.</p>
+<p><code>{r ref.label=knitr::all_labels(), echo = T, eval = F}</code>, som vi har hentet fra <span class="citation">Xie (2018)</span>.</p>
 </div>
 </div>
 <div id="konklusjon" class="section level2">
