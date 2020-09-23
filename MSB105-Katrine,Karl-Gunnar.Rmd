@@ -17,10 +17,9 @@ output:
     df_print: paged
     toc: true
     toc_depth: 3
-    fig_height: 4
-  pdf_document: 
+  pdf_document:
     df_print: paged
-    toc: yes
+    toc: true
     toc_depth: 3
     fig_height: 4
 bibliography: reproducibility.bib
@@ -66,9 +65,6 @@ Dersom den nye studien kan bekrefte resultatene og konklusjonen fra et tidligere
 @peng2011 anser replikasjon som den ultimate standarden i likhet med @jasny2011. 
 
 ### 2.2 Problemets omfang
-
-> Vil dagens løsning med arkiv av data og eventuelt programkode hos tidsskriftene
-kunne løse problemet?
 
 Som forklart tidligere så kan tidligere studier mangle data, koder, fremgangsmåte, feil i programvare osv, samt er det flere forskere som ikke ønsker å gi fra seg all informasjon om sine studier. 
 Dette gjør at det er nærmest umulig for forskere i senere tid å reprodusere en tidligere studie.
