@@ -8,7 +8,7 @@ classoption: twoside
 fontsize: 12pt
 linestretch: 1.5
 output:
-  pdf_document:
+  word_document:
     df_print: paged
     toc: true
     toc_depth: 3
@@ -17,7 +17,7 @@ output:
     toc: true
     toc_depth: 3
     toc_float: true
-  word_document:
+  pdf_document:
     df_print: paged
     toc: true
     toc_depth: 3
@@ -52,11 +52,12 @@ Noe av det som kan være med å gjøre det vanskelig å reprodusere, men også r
 National Science Foundation i USA viser til at for at vitenskap skal være robust og pålitelig må funnene være reproduserbar, replikerbart og generaliserbart [@bollen2015]. 
 I henhold til National Science Foundation blir de 3 påstandene definert som [@bollen2015]:
 
-- **Reproduserbarhet**: Å repodusere vil si å gjøre studiet på nytt, med de samme dataene og med den samme metodikken, men gjort av en uavhengig part.
-
-- **Replikerbarhet**: Å replikere vil si at et studie gjøres på nytt av en uavhengig part, gjerne med nye data og at resultater og konklusjon er lik som tidligere. 
-
-- **Generaliserbarhet**: Vil si at et studie kan gjøres på nytt med ny data og ny sammensetning, men komme frem til lignende konklusjoner. 
+1. **Reproduserbarhet**: 
+    + Å repodusere vil si å gjøre studiet på nytt, med de samme dataene og med den samme metodikken, men gjort av en uavhengig part.
+1. **Replikerbarhet**:
+    + Å replikere vil si at et studie gjøres på nytt av en uavhengig part, gjerne med nye data og at resultater og konklusjon er lik som tidligere.
+1. **Generaliserbarhet**: 
+    + Vil si at et studie kan gjøres på nytt med ny data og ny sammensetning, men komme frem til lignende konklusjoner. 
 
 Reproduksjon har potensiale til å være en minimumsstandard i følge @peng2011, når full uavhengig replikasjon ikke er tilgjengelig. 
 Dersom den nye studien kan bekrefte resultatene og konklusjonen fra et tidligere studie via replikasjon blir dette sett på som en vitenskapelig gullstandard [@jasny2011]. 
