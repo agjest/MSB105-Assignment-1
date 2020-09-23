@@ -13,15 +13,15 @@ output:
     toc: true
     toc_depth: 3
     fig_height: 4
-  word_document:
-    df_print: paged
-    toc: true
-    toc_depth: 3
   html_document:
     df_print: paged
     toc: true
     toc_depth: 3
     toc_float: true
+  word_document:
+    df_print: paged
+    toc: true
+    toc_depth: 3
 bibliography: reproducibility.bib
 lang: nb-NO
 csl: apa-no-ampersand.csl
@@ -186,8 +186,9 @@ Vi benytter oss av følgende kode i en egen "chunk" i appendikset *"Koder"*:
 `{r ref.label=knitr::all_labels(), echo = T, eval = F}`, som vi har hentet fra @xie2018a.
 
 ## 4. Konklusjon
+
 Vi ser at ved å bruke R Notebook og lage et dynamisk dokument med både data, koder, fremgangsmåte, resultat og referanser, skal det være mulig å reprodusere, replikere og generalisere et studie. 
-Det som kan gjøre det litt vanskelig er kompleksiteten på programmet, fordi selve kode- og data delen i Rstudio er ikke det som er vanskeligst siden man kan skrive både formel og kode og få utdata i samme dokument, men det er alle programmer og pakker som skal snakke i lag som gjør arbeidet litt mer komplekst.
+Det som kan gjøre det litt vanskelig er kompleksiteten på programmet, fordi selve kode- og data delen i RStudio er ikke det som er vanskeligst siden man kan skrive både formel og kode og få utdata i samme dokument, men det er alle programmer og pakker som skal snakke i lag som gjør arbeidet litt mer komplekst.
 Den viktigste komponenten vil uansett alltid være at forskeren ønsker å dele sin fulle utredelse slik at forskningen faktisk kan brukes av andre uavhengige parter, det er derfor viktig at det blir flere standard retningslinjer for hva som er minimumskrav for forskere ved utgivelse av undersøkelser. 
 
 \newpage
