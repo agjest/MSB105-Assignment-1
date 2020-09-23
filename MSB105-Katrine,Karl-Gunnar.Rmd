@@ -21,6 +21,7 @@ output:
     df_print: paged
     toc: true
     toc_depth: 3
+    fig_height: 4
 bibliography: reproducibility.bib
 lang: nb-NO
 csl: apa-no-ampersand.csl
@@ -136,7 +137,8 @@ apply(Titanic, c(2, 3, 4), sum)
 
 Vi kan også bruke pakken ggplot [utviklet av: @wickham2016a] til å lage spennende og forklarende grafer dersom vi ønsker å forklare variabler i datasett.
 
-Den følgende grafen er da hentet fra forelesningsnotatene [@gjestland2020] og tar utgangspunkt i datasettet *mtcars*.
+De følgende grafene er da hentet fra forelesningsnotatene [@gjestland2020] og tar utgangspunkt i datasettet *mtcars*.
+Den første grafen er original, mens den andre lettere modifisert for å vise hvor lett det er å endre utseende og farger på grafen etter eget ønske.
 
 ```{r mtcars-forelesning, echo=FALSE}
 hp_acc <- data.frame(hp = mtcars$hp, acc = 1609.347/(2*mtcars$qsec^2))
@@ -149,9 +151,6 @@ ggplot(data = mtcars, mapping = aes(x = hp, y = 1609.347/(2*qsec^2))) +
   geom_smooth(method = "lm", se = FALSE) +
   labs(y="Mean acceleration (m/s^2)", colour = "Weight") 
 ```
-
-\newpage
-Og her viser vi den samme grafen, men lettere modifisert for å vise hvor lett det er å endre utseende og farger på grafen etter eget ønske.
 
 ```{r mtcars-forelesning-fargerik, echo=FALSE}
 hp_acc <- data.frame(hp = mtcars$hp, acc = 1609.347/(2*mtcars$qsec^2))
@@ -199,7 +198,6 @@ Den viktigste komponenten vil uansett alltid være at forskeren ønsker å dele 
 ## Appendiks
 
 ![Merge conflict](C:/Users/dunna/Documents/Skole 2020/MSB105 - Data Science/MSB105-Assignment-1/merge-conflict.png)
-
 ![Git historie](C:/Users/dunna/Documents/Skole 2020/MSB105 - Data Science/MSB105-Assignment-1/git-history.png)
 
 \newpage
