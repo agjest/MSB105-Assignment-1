@@ -8,6 +8,10 @@ classoption: twoside
 fontsize: 12pt
 linestretch: 1.5
 output:
+  word_document:
+    df_print: paged
+    toc: true
+    toc_depth: 3
   pdf_document:
     df_print: paged
     toc: true
@@ -17,10 +21,6 @@ output:
     toc: true
     toc_depth: 3
     toc_float: true
-  word_document:
-    df_print: paged
-    toc: true
-    toc_depth: 3
 bibliography: reproducibility.bib
 lang: nb-NO
 csl: apa-no-ampersand.csl
@@ -210,6 +210,8 @@ Vi benytter oss av følgende kode i en egen "chunk" i appendikset *"Koder"*:
 ## Appendiks
 
 ![Merge conflict](C:/Users/dunna/Documents/Skole 2020/MSB105 - Data Science/MSB105-Assignment-1/merge-conflict.png)
+
+![Git historie](C:/Users/dunna/Documents/Skole 2020/MSB105 - Data Science/MSB105-Assignment-1/git-history.png)
 
 \newpage
 ## Koder
