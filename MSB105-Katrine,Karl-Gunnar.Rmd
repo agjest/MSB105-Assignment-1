@@ -24,6 +24,13 @@ bibliography: reproducibility.bib
 lang: nb-NO
 ---
 
+```{r setup, message=FALSE, echo=FALSE}
+library(ggplot2)
+library(tinytex)
+library(tidyverse)
+library(ggpubr)
+```
+
 
 ## Innledning
 
@@ -31,9 +38,94 @@ lang: nb-NO
 
 ## Analyse
 
+### 3.1 Titanic
+
 I dette kapittelet vil vi gå gjennom noen eksempler hvordan vi kan lage og vise frem data ved hjelp av *RStudio*.
 Vi vil også se på hva som kan gjøres for å vurdere viktigheten av å kunne presentere reproduserbare data, og om dette vil la seg gjøre på en enkel måte.
+
+Vi begynner først med å lage en oversikt over hvor mange som overlevde den skjebnesvangre jomfruturen til Titanic i 1912.
+Dette kan vi gjøre via datasettet *"Titanic"*, utviklet av @rcoreteam2020.
+
+```{r titanic-mosic, echo=FALSE}
+mosaicplot(Titanic, main = "Overlevelse på Titanic", color = "darkgreen", border = "red")
+```
+
+
+Denne oversikten er gjerne litt rotete og forteller oss lite om nøyaktig hvor mange passasjerer som tilhører de forskjellige boksene.
+Den gir oss altså ikke stort mer enn en indikasjon på forholdet mellom død og overlevelse. 
+Men vi kan tydelig se at det var generelt svært mange fra de høyere klassene, og da særlig blant barn og kvinner som overlevde.
+
+Dette kan vi også se på de to påfølgende oversiktene:
+
+```{r passassjertall, echo=FALSE}
+apply(Titanic, c(3, 4), sum)
+```
+
+```{r titanic-overlevelsesrate, echo=FALSE}
+apply(Titanic, c(1, 2, 3, 4), sum)
+```
+
+Vi kan vise den første tabellen over, som viser det totale antallet overlevende blant barn og voksne, på følgende måte.
+Dette vil også fungere som et eksempel på en "chunk" som inneholder både kode og tekst.
+
+```{r overlevelsesrate-vist, echo=TRUE}
+## Vi summerer variablene hentet fra "Help"-funksjonen i RStudio.
+apply(Titanic, c(3, 4), sum)
+```
+
+### 3.2 Eksepel fra forelesning
+
+Vi kan også bruke pakken ggplot [utviklet av: @wickham2016a] til å lage spennende og forklarende grafer dersom vi ønsker å forklare variabler i datasett.
+
+Den følgende grafen er da hentet fra forelesningsnotatene [@gjestland2020] og tar utgangspunkt i datasettet *mtcars*.
+
+```{r mtcars-forelesning}
+hp_acc <- data.frame(hp = mtcars$hp, acc = 1609.347/(2*mtcars$qsec^2))
+
+ggplot(data = mtcars, mapping = aes(x = hp, y = 1609.347/(2*qsec^2))) +
+  geom_point(data=hp_acc, mapping = aes(x = hp, y = acc), colour= "grey80") +
+  facet_wrap(~cut_number(wt, n =3 , labels = c("Light", "Medium", "Heavy"))) +
+  geom_point(aes(colour = cut_number(wt, n = 3, labels = c("Light", "Medium", "Heavy"))), 
+             show.legend = FALSE) +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(y="Mean acceleration (m/s^2)", colour = "Weight") 
+```
+
+Og her viser vi den samme grafen, men lettere modifisert for å vise hvor lett det er å endre utseende og farger på grafen etter eget ønske.
+
+```{r mtcars-forelesning-fargerik, echo=FALSE}
+hp_acc <- data.frame(hp = mtcars$hp, acc = 1609.347/(2*mtcars$qsec^2))
+
+ggplot(data = mtcars, mapping = aes(x = hp, y = 1609.347/(2*qsec^2))) +
+  geom_point(data=hp_acc, mapping = aes(x = hp, y = acc), colour= "black") +
+  facet_wrap(~cut_number(wt, n =3 , labels = c("Light", "Medium", "Heavy")), strip.position = "bottom") +
+  theme(panel.background = element_rect(fill = "pink"), strip.background = element_rect(fill = "yellow",color = "red")) +
+  geom_point(aes(colour = cut_number(wt, n = 3, labels = c("Light", "Medium", "Heavy"))), 
+             show.legend = F) +
+  geom_smooth(method = "lm", color = "brown", se = FALSE) +
+  labs(y="Mean acceleration (m/s^2)", colour = "Weight")
+```
+
+### 3.3 Kapitteloppsummering
+
+I dette kapittelet har vi vist eksempler på "forskningsresultater", der vi både viser og unnlater å vise hvordan vi kom frem til "sluttproduktet".
+Det skal være forholdsvis enkelt å reprodusere våre resultater.
+**Men** det forutsetter at andre brukere har installert akkurat nøyaktig de samme pakkene i *RStudio*, som vi har benyttet oss av. 
+
+Det kan være mange grunner til at forskere ønsker å beskytte sine data, noe som gjør det særs vanskelig å reprodusere. 
+Et eksempel kan være at de ønsker å beskytte arbeidet sitt, et annet kan være at "code chunks" i "hytt og pine" kan virke forstyrrende og uinteressant for leseren.
+
+Som vi var inne på i forrige kapittel, kan en god løsning være å samle alle kodene i et eget *kode-appendiks* i slutten av dokumentet. 
+Dette er noe vi har valgt å gjøre for å vise frem muligheten. 
+Vi benytter oss av følgende kode i en egen "chunk" i appendikset *"Koder"*: 
+
+***{r ref.label=knitr::all_labels(), echo = T, eval = F}***, som vi har hentet fra @xie2018a.
 
 ## Konklusjon
 
 ## Referanse
+
+## Koder
+
+```{r ref.label=knitr::all_labels(), echo = T, eval = F}
+```
