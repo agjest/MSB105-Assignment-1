@@ -1,6 +1,6 @@
 ---
 title: "R Notebooks og reproduserbarhet"
-subtitle: "Assignment 1 i MSB105 Data Science - innleveringsfrist 21.09.20"
+subtitle: "Assignment 1 i MSB105 Data Science - innleveringsfrist 24.09.20"
 author: 
   - Katrine Hope
   - Karl-Gunnar Severinsen
@@ -8,14 +8,15 @@ classoption: twoside
 fontsize: 12pt
 linestretch: 1.5
 output:
-  html_document:
-    df_print: paged
-    toc: true
-    toc_depth: 3
   pdf_document:
     df_print: paged
     toc: true
     toc_depth: 3
+  html_document:
+    df_print: paged
+    toc: true
+    toc_depth: 3
+    toc_float: true
   word_document:
     df_print: paged
     toc: true
@@ -32,6 +33,7 @@ library(tidyverse)
 library(ggpubr)
 ```
 
+\newpage
 ## 1. Innledning
 
 I denne oppgaven ønsker vi å se på reproduserbarhet og viktigheten av det.
@@ -40,6 +42,80 @@ Vi vil i denne sammenhengen ta oss innom temaet om bruk av "R Notebook" i Rstudi
 Vi vil se på teori rundt reproduserbarhet og R Notebook, som vi også vil knytte opp til en analyse.
 
 ## 2. Teori
+
+### 2.1 Replikerbarhet/reproduserbarhet
+
+Det er ønskelig at vitenskapelige oppdagelser og fremskritt skal være robuste og pålitelige fordi vi ønsker å ha tillit til at resultatene er riktig og at undersøkelsene er gjort på en tilfredsstillende måte [@bollen2015].
+I følge @mcnutt2014 er det viktig for at vitenskapen skal utvikle seg at funnene baserer seg på troverdige funn.
+Mange forskere mener at reproduserbarhet er en viktig fremgangsmåte for å kunne validere funnene sine, men dette har vist seg å være veldig vanskelig å gjennomføre [@mcnutt2014]. 
+Noe av det som kan være med å gjøre det vanskelig å reprodusere, men også replikere, er at tidligere studier kan mangle data eller koder, det kan være feil i programvaren som er sendt med, det kan mangle dokumentasjon, samt er det noen forskere som ikke ønsker å gi fra seg sine data og koder på studiene sine. 
+National Science Foundation i USA viser til at for at vitenskap skal være robust og pålitelig må funnene være reproduserbar, replikerbart og generaliserbart [@bollen2015]. 
+I henhold til National Science Foundation blir de 3 påstandene definert som [@bollen2015]:
+
+- **Reproduserbarhet**: Å repodusere vil si å gjøre studiet på nytt, med de samme dataene og med den samme metodikken, men gjort av en uavhengig part.
+
+- **Replikerbarhet**: Å replikere vil si at et studie gjøres på nytt av en uavhengig part, gjerne med nye data og at resultater og konklusjon er lik som tidligere. 
+
+- **Generaliserbarhet**: Vil si at et studie kan gjøres på nytt med ny data og ny sammensetning, men komme frem til lignende konklusjoner. 
+
+Reproduksjon har potensiale til å være en minimumsstandard i følge @peng2011, når full uavhengig replikasjon ikke er tilgjengelig. 
+Dersom den nye studien kan bekrefte resultatene og konklusjonen fra et tidligere studie via replikasjon blir dette sett på som en vitenskapelig gullstandard [@jasny2011]. 
+@peng2011 anser replikasjon som den ultimate standarden i likhet med @jasny2011. 
+
+### 2.2 Problemets omfang
+
+> Vil dagens løsning med arkiv av data og eventuelt programkode hos tidsskriftene
+kunne løse problemet?
+
+Som forklart tidligere så kan tidligere studier mangle data, koder, fremgangsmåte, feil i programvare osv, samt er det flere forskere som ikke ønsker å gi fra seg all informasjon om sine studier. 
+Dette gjør at det er nærmest umulig for forskere i senere tid å reprodusere en tidligere studie.
+Siden det er mer enn et problem vil det også være flere løsninger som må implementeres for at full reproduksjon skal være mulig. 
+
+Vi kan dele løsningene inn i tekniske løsninger og menneskelige løsninger. 
+Den menneskelige komponenten i problemstillingen er at mange forskere ikke ønsker full åpenhet til data, koder, programvare osv i sine studier. 
+Dette har ikke vært standard retningslinjer tidligere og det viser seg at dette kan fremdeles i dag være en utfordring, det trengs derfor klare retningslinjer om hva som bør anses som god forskning i henhold til kravene om reproduksjon og replikasjon.
+I den tekniske delen kan problemet ofte være at det mangler data, koder, fremgangsmåte eller at det er feil i programvare. 
+Ved å integrere koder i selve artikkelen, selv om de ikke trenger nødvendigvis å være synlig, skal det være mulig for andre forskere å reprodusere og replikere studien. 
+
+Her er en oversikt over hva som skal sendes til tidsskriftene:
+
+- Dokument med tekst.
+- Kode til å lese inn dataen med.
+- Kode til å kalkulere de ulike modellene. 
+- Kode for å teste modellene. 
+- Kode for å generere rapport av selve resultatene. 
+
+Hovedpunktet er at all data og koder vil bli sendt sammen med et fullstendig reproduserbart dokument. 
+
+#### 2.2.1 Mulig løsning (teoretisk plan)
+
+I følge @gentleman2007 er det viktig, kanskje også essensielt, å integrere beregninger og koder som brukes i dataanalyser, metodebeskrivelser og simuleringer. 
+Dette kan gjøres via et kompendium i henhold til @gentleman2007.
+Kompendium vil si en samling av de ulike elementene, som tekst, kode, data, metodikk og lignende, og dette skal settes sammen som en enhet for å kunne distribueres, håndteres og oppdateres. 
+Dersom kompendiet er laget riktig skal forfattere enkelt kunne reprodusere resultatene. 
+
+Dynamiske dokumenter er en ordnet sammensetning av stykker ("chunks") med kode eller tekst. 
+"Code chunk" kan brukes som et middel som gjengir utdata i dokumenter, eller bare for å vise kode for illustrasjon, siden "code chunks" utfører beregninger som trengs for å produsere riktig utdata i dokumentet, men også for å produsere mellomresultater brukt på tvers av forskjellige code chunks [@gentleman2007]. 
+"Text chunks" er ment å være formatert for lesing og beskriver som oftest problemet, koden, resultatene og tolkningen [@gentleman2007]. 
+Et optimalt kompendium vil derfor være et dynamisk dokument siden alle komponenter er til stedet for reproduksjon. 
+I analysedelen av denne oppgaven vil vi vise i R Notebook i programmet Rstudio hvordan vi legger inn text- og code chunks. 
+
+#### 2.2.2 Mulig løsning (R Notebooks):
+
+Tidligere var det R Markdown som ble brukt, men der fikk man ikke all tekst, koding og utdata (resultat) inn i samme dokument, som oftest ble dette delt opp i ulike vindu. 
+R Notebook er den nyeste utgivelsen fra Rstudio på programutvikling. Rstudio er en IDE (Integrated Developer Enviroment) for alle R relaterte ting. Rstudio er et gratis programvare som du både kan laste ned lokalt på datamaskinen eller du kan jobbe over internett. Alle de vanlige platformene skal ha mulighet til å bruke R Studio som Mac, Window og Linux. R studio må knyttes sammen med andre programvarer for å kunne oppnå reproduserbarhet og replikerbarhet som er målet. 
+
+Programvarer som R knyttes opp mot: 
+
+- R Markdown
+- Knitr
+- Github
+- LaTex (tinytex)
+- (Tinyverse, må sjekkes?)
+
+RStudio kan knyttes opp mot github og det gjør at man har arbeidet sitt skylagret. 
+
+En R Notebook er et R Markdown dokument med "code- og text chunks" som kan hente inn data og koder, utføre beregning ut i fra formlene som legges inn i "code chunks" og R Notebook vil vise oss resultatene direkte i samme dokument som vi arbeider i [xie2018]. 
 
 ## 3. Analyse
 
@@ -59,22 +135,13 @@ Denne oversikten er gjerne litt rotete og forteller oss lite om nøyaktig hvor m
 Den gir oss altså ikke stort mer enn en indikasjon på forholdet mellom død og overlevelse. 
 Men vi kan tydelig se at det var generelt svært mange fra de høyere klassene, og da særlig blant barn og kvinner som overlevde.
 
-Dette kan vi også se på de to påfølgende oversiktene:
-
-```{r passassjertall, echo=FALSE}
-apply(Titanic, c(3, 4), sum)
-```
-
-```{r titanic-overlevelsesrate, echo=FALSE}
-apply(Titanic, c(1, 2, 3, 4), sum)
-```
-
-Vi kan vise den første tabellen over, som viser det totale antallet overlevende blant barn og voksne, på følgende måte.
+Vi kan vise dette på følgende måte, som viser det totale antallet overlevende blant barn og voksne.
 Dette vil også fungere som et eksempel på en "chunk" som inneholder både kode og tekst.
 
 ```{r overlevelsesrate-vist, echo=TRUE}
 ## Vi summerer variablene hentet fra "Help"-funksjonen i RStudio.
 apply(Titanic, c(3, 4), sum)
+apply(Titanic, c(2, 3, 4), sum)
 ```
 
 ### 3.2 Eksepel fra forelesning
@@ -83,7 +150,7 @@ Vi kan også bruke pakken ggplot [utviklet av: @wickham2016a] til å lage spenne
 
 Den følgende grafen er da hentet fra forelesningsnotatene [@gjestland2020] og tar utgangspunkt i datasettet *mtcars*.
 
-```{r mtcars-forelesning}
+```{r mtcars-forelesning, echo=FALSE}
 hp_acc <- data.frame(hp = mtcars$hp, acc = 1609.347/(2*mtcars$qsec^2))
 
 ggplot(data = mtcars, mapping = aes(x = hp, y = 1609.347/(2*qsec^2))) +
@@ -95,6 +162,7 @@ ggplot(data = mtcars, mapping = aes(x = hp, y = 1609.347/(2*qsec^2))) +
   labs(y="Mean acceleration (m/s^2)", colour = "Weight") 
 ```
 
+\newpage
 Og her viser vi den samme grafen, men lettere modifisert for å vise hvor lett det er å endre utseende og farger på grafen etter eget ønske.
 
 ```{r mtcars-forelesning-fargerik, echo=FALSE}
@@ -110,14 +178,19 @@ ggplot(data = mtcars, mapping = aes(x = hp, y = 1609.347/(2*qsec^2))) +
   labs(y="Mean acceleration (m/s^2)", colour = "Weight")
 ```
 
-### 3.3 Kapitteloppsummering
+### 3.3 Sessioninfo og koder
 
 I dette kapittelet har vi vist eksempler på "forskningsresultater", der vi både viser og unnlater å vise hvordan vi kom frem til "sluttproduktet".
 Det skal være forholdsvis enkelt å reprodusere våre resultater.
 **Men** det forutsetter at andre brukere har installert akkurat nøyaktig de samme pakkene i *RStudio*, som vi har benyttet oss av. 
+En løsning på denne utfordringen kan være å legge ved følgende "chunk". 
+Den vil produsere en oversikt over nødvendig programvare, for å kunne reprodusere nøyaktig samme resultater som her.
 
-Det kan være mange grunner til at forskere ønsker å beskytte sine data, noe som gjør det særs vanskelig å reprodusere. 
-Et eksempel kan være at de ønsker å beskytte arbeidet sitt, et annet kan være at "code chunks" i "hytt og pine" kan virke forstyrrende og uinteressant for leseren.
+```{r sessionInfo, echo=TRUE}
+sessionInfo()
+```
+
+> *Det passer nok best å kjøre en slik kode helt til slutt i dokumentet, da det gjerne tar en del plass og kan virke forstyrrende inne i en artikkel (som her).*
 
 Som vi var inne på i forrige kapittel, kan en god løsning være å samle alle kodene i et eget *kode-appendiks* i slutten av dokumentet. 
 Dette er noe vi har valgt å gjøre for å vise frem muligheten. 
@@ -126,6 +199,7 @@ Vi benytter oss av følgende kode i en egen "chunk" i appendikset *"Koder"*:
 ***{r ref.label=knitr::all_labels(), echo = T, eval = F}***, som vi har hentet fra @xie2018a.
 
 ## 4. Konklusjon
+
 
 \newpage
 ## Referanse
