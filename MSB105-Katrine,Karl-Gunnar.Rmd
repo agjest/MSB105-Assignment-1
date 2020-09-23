@@ -8,7 +8,7 @@ classoption: twoside
 fontsize: 12pt
 linestretch: 1.5
 output:
-  word_document:
+  pdf_document:
     df_print: paged
     toc: true
     toc_depth: 3
@@ -17,7 +17,7 @@ output:
     toc: true
     toc_depth: 3
     toc_float: true
-  pdf_document:
+  word_document:
     df_print: paged
     toc: true
     toc_depth: 3
@@ -197,7 +197,7 @@ Som vi var inne på i forrige kapittel, kan en god løsning være å samle alle 
 Dette er noe vi har valgt å gjøre for å vise frem muligheten. 
 Vi benytter oss av følgende kode i en egen "chunk" i appendikset *"Koder"*: 
 
-***{r ref.label=knitr::all_labels(), echo = T, eval = F}***, som vi har hentet fra @xie2018a.
+`{r ref.label=knitr::all_labels(), echo = T, eval = F}`, som vi har hentet fra @xie2018a.
 
 ## 4. Konklusjon
 
