@@ -8,15 +8,15 @@ classoption: twoside
 fontsize: 12pt
 linestretch: 1.5
 output:
-  word_document:
-    df_print: paged
-    toc: true
-    toc_depth: 3
   html_document:
     df_print: paged
     toc: true
     toc_depth: 3
     toc_float: true
+  word_document:
+    df_print: paged
+    toc: true
+    toc_depth: 3
   pdf_document:
     df_print: paged
     toc: true
@@ -64,9 +64,6 @@ Dersom den nye studien kan bekrefte resultatene og konklusjonen fra et tidligere
 @peng2011 anser replikasjon som den ultimate standarden i likhet med @jasny2011. 
 
 ### 2.2 Problemets omfang
-
-> Vil dagens løsning med arkiv av data og eventuelt programkode hos tidsskriftene
-kunne løse problemet?
 
 Som forklart tidligere så kan tidligere studier mangle data, koder, fremgangsmåte, feil i programvare osv, samt er det flere forskere som ikke ønsker å gi fra seg all informasjon om sine studier. 
 Dette gjør at det er nærmest umulig for forskere i senere tid å reprodusere en tidligere studie.
