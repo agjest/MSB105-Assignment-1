@@ -8,6 +8,10 @@ classoption: twoside
 fontsize: 12pt
 linestretch: 1.5
 output:
+  word_document:
+    df_print: paged
+    toc: true
+    toc_depth: 3
   html_document:
     df_print: paged
     toc: true
@@ -18,10 +22,6 @@ output:
     toc: true
     toc_depth: 3
     fig_height: 4
-  word_document:
-    df_print: paged
-    toc: true
-    toc_depth: 3
 bibliography: reproducibility.bib
 lang: nb-NO
 csl: apa-no-ampersand.csl
@@ -198,8 +198,8 @@ Den viktigste komponenten vil uansett alltid være at forskeren ønsker å dele 
 \newpage
 ## Appendiks
 
-![Merge conflict](C:/Users/dunna/Documents/Skole 2020/MSB105 - Data Science/MSB105-Assignment-1/merge-conflict.png)
-![Git historie](C:/Users/dunna/Documents/Skole 2020/MSB105 - Data Science/MSB105-Assignment-1/git-history.png)
+![Merge conflict](merge-conflict.png)
+![Git historie](git-history.png)
 
 \newpage
 ## Koder
