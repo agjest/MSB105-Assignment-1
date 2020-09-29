@@ -8,16 +8,16 @@ classoption: twoside
 fontsize: 12pt
 linestretch: 1.5
 output:
-  pdf_document:
-    df_print: paged
-    toc: true
-    toc_depth: 3
-    fig_height: 4
   html_document:
     df_print: paged
     toc: true
     toc_depth: 3
     toc_float: true
+  pdf_document:
+    df_print: paged
+    toc: true
+    toc_depth: 3
+    fig_height: 4
   word_document:
     df_print: paged
     toc: true
@@ -117,7 +117,11 @@ Vi begynner først med å lage en oversikt over hvor mange som overlevde den skj
 Dette kan vi gjøre via datasettet *"Titanic"*, utviklet av @rcoreteam2020.
 
 ```{r titanic-mosic, echo=FALSE}
-mosaicplot(Titanic, main = "Overlevelse på Titanic", color = "darkgreen", border = "red")
+mosaicplot(Titanic,
+  main = "Overlevelse på Titanic",
+  color = "darkgreen",
+  border = "red"
+)
 ```
 
 Denne oversikten er gjerne litt rotete og forteller oss lite om nøyaktig hvor mange passasjerer som tilhører de forskjellige boksene.
@@ -141,28 +145,36 @@ De følgende grafene er da hentet fra forelesningsnotatene [@gjestland2020] og t
 Den første grafen er original, mens den andre lettere modifisert for å vise hvor lett det er å endre utseende og farger på grafen etter eget ønske.
 
 ```{r mtcars-forelesning, echo=FALSE}
-hp_acc <- data.frame(hp = mtcars$hp, acc = 1609.347/(2*mtcars$qsec^2))
+hp_acc <- data.frame(hp = mtcars$hp,
+                     acc = 1609.347 / (2 * mtcars$qsec^2)
+                     )
 
-ggplot(data = mtcars, mapping = aes(x = hp, y = 1609.347/(2*qsec^2))) +
-  geom_point(data=hp_acc, mapping = aes(x = hp, y = acc), colour= "grey80") +
-  facet_wrap(~cut_number(wt, n =3 , labels = c("Light", "Medium", "Heavy"))) +
-  geom_point(aes(colour = cut_number(wt, n = 3, labels = c("Light", "Medium", "Heavy"))), 
-             show.legend = FALSE) +
+ggplot(data = mtcars, 
+       mapping = aes(x = hp, 
+                     y = 1609.347 / (2 * qsec^2)
+                     )
+       ) +
+  geom_point(data = hp_acc, mapping = aes(x = hp, y = acc), colour = "grey80") +
+  facet_wrap(~ cut_number(wt, n = 3, labels = c("Light", "Medium", "Heavy"))) +
+  geom_point(aes(colour = cut_number(wt, n = 3, labels = c("Light", "Medium", "Heavy"))),
+    show.legend = FALSE
+  ) +
   geom_smooth(method = "lm", se = FALSE) +
-  labs(y="Mean acceleration (m/s^2)", colour = "Weight") 
+  labs(y = "Mean acceleration (m/s^2)", colour = "Weight")
 ```
 
 ```{r mtcars-forelesning-fargerik, echo=FALSE}
-hp_acc <- data.frame(hp = mtcars$hp, acc = 1609.347/(2*mtcars$qsec^2))
+hp_acc <- data.frame(hp = mtcars$hp, acc = 1609.347 / (2 * mtcars$qsec^2))
 
-ggplot(data = mtcars, mapping = aes(x = hp, y = 1609.347/(2*qsec^2))) +
-  geom_point(data=hp_acc, mapping = aes(x = hp, y = acc), colour= "black") +
-  facet_wrap(~cut_number(wt, n =3 , labels = c("Light", "Medium", "Heavy")), strip.position = "bottom") +
-  theme(panel.background = element_rect(fill = "pink"), strip.background = element_rect(fill = "yellow",color = "red")) +
-  geom_point(aes(colour = cut_number(wt, n = 3, labels = c("Light", "Medium", "Heavy"))), 
-             show.legend = F) +
+ggplot(data = mtcars, mapping = aes(x = hp, y = 1609.347 / (2 * qsec^2))) +
+  geom_point(data = hp_acc, mapping = aes(x = hp, y = acc), colour = "black") +
+  facet_wrap(~ cut_number(wt, n = 3, labels = c("Light", "Medium", "Heavy")), strip.position = "bottom") +
+  theme(panel.background = element_rect(fill = "pink"), strip.background = element_rect(fill = "yellow", color = "red")) +
+  geom_point(aes(colour = cut_number(wt, n = 3, labels = c("Light", "Medium", "Heavy"))),
+    show.legend = F
+  ) +
   geom_smooth(method = "lm", color = "brown", se = FALSE) +
-  labs(y="Mean acceleration (m/s^2)", colour = "Weight")
+  labs(y = "Mean acceleration (m/s^2)", colour = "Weight")
 ```
 
 ### 3.3 Sessioninfo og koder
@@ -198,12 +210,13 @@ Den viktigste komponenten vil uansett alltid være at forskeren ønsker å dele 
 \newpage
 ## Appendiks
 
-![Merge conflict](C:/Users/dunna/Documents/Skole 2020/MSB105 - Data Science/MSB105-Assignment-1/merge-conflict.png)
-![Git historie](C:/Users/dunna/Documents/Skole 2020/MSB105 - Data Science/MSB105-Assignment-1/git-history.png)
+![Merge conflict](merge-conflict.png)
+![Git historie](git-history.png)
+
 
 \newpage
 ## Koder
 
 ```{r ref.label=knitr::all_labels(), echo = T, eval = F}
-```
 
+```

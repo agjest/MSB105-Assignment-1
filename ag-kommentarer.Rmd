@@ -1,0 +1,23 @@
+---
+title: "AG kommentarer"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+1) Aldri bruk absolutte stier for bilder, bib-filer etc.. Dokumentet ville ikke kjøre fordi det ikke fant et bilde.
+Det hadde stien: C:/Users/dunna/Documents/Skole 2020/MSB105 - Data Science/MSB105-Assignment-1/merge-conflict.png mens merge-conflict.png ville virket (hos meg og alle andre) siden bildet ligger i samme mappe som dokumentet.
+2) Samme for git-history.png, men her fant jeg ikke noe bildet i mappen så jeg dupliserte bare merge-conflict.png og skiftet navn til git-history.png
+3) Ser dere t.o.m. har en `apply()` i koden. Bra jobbet ;-)
+4) sessionInfo() sier:
+
+```{r, echo TRUE}
+## R version 4.0.2 (2020-06-22)
+## Platform: x86_64-apple-darwin17.0 (64-bit)
+## Running under: macOS Catalina 10.15.6 etc. etc.
+```
+
+Dette er riktig for min maskin, men neppe den dere har kjørt på. Dere må kjøre sessionInfo på deres maskin og så lime det inn i dokumentet, feks slik jeg har gjort ovenfor.
+5) Likte trikset med alle koder til slutt. Hvis dere styler koden litt mer slik jeg har gjort med `mosaicplot()` så slipper dere at kodelinjene går utenfor siden
+6) Flott git historie, dere har kommet langt på kort tid 
+
